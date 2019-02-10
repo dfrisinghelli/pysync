@@ -1,12 +1,17 @@
 import os
 import sys
 
-class pysync:
+class pybackup:
     
     def __init__(self, source, target):
         self.source = os.path.normpath(source)
         self.target = os.path.normpath(target)
         
+        # check if source directory exists
+        if not os.path.isdir(self.source):
+            print('Source directory {} does not exist'.format(self.source))
+            sys.exit()
+
         # create target directory if it does
         # not yet exist
         if not os.path.isdir(self.target):
