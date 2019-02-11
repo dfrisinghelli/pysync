@@ -30,10 +30,10 @@ Once installed, you can import the package in a python environment using
 ```python,
 import pysync
 ```
-Since the package only contains a class `PySync`use:
+Since the actual class `PySync` is in the `pysync.py` module use:
 
 ```python,
-from pysync import PySync
+from pysync.pysync import PySync
 ```
 
 ## Instantiation
